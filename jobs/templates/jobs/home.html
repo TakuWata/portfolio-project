@@ -1,13 +1,15 @@
 <!doctype html>
+
+{% load staticfiles %}
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Hello, I am Tak</title>
+    <title>Hello, I'm Tak</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -18,15 +20,15 @@
 
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Tak</a>
+        <a class="navbar-brand" href="{% url 'home' %}">Tak</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link" href="#">Twitter</a>
-            <a class="nav-item nav-link" href="#">Resume</a>
-            <a class="nav-item nav-link" href="#">blog</a>
+            <a class="nav-item nav-link" href="http://twitter.com/tkm_w">Twitter</a>
+            <a class="nav-item nav-link" href="{% static 'Google AdWords.pdf' %}">Resume</a>
+            <a class="nav-item nav-link" href="{% url 'allblogs' %}">blog</a>
           </div>
         </div>
       </nav>
@@ -41,6 +43,7 @@
           <p>
             <a href="mailto:takumi.watanabe.mobile@gmail.com" class="btn btn-primary my-2">Email me</a>
           </p>
+          <img src="{% static 'RIMG0008.JPG' %}" height="100" width="100"/>
         </div>
       </section>
 
